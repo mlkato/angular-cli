@@ -24,6 +24,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
  * require('less-loader')
  * require('node-sass')
  * require('sass-loader')
+ * require('resolve-url-loader')
  */
 
 export function getStylesConfig(wco: WebpackConfigOptions) {
@@ -74,7 +75,7 @@ export function getStylesConfig(wco: WebpackConfigOptions) {
   // set base rules to derive final rules from
   const baseRules = [
     { test: /\.css$/, loaders: [] },
-    { test: /\.scss$|\.sass$/, loaders: ['sass-loader'] },
+    { test: /\.scss$|\.sass$/, loaders: ['sass-loader', 'resolve-url-loader'] },
     { test: /\.less$/, loaders: ['less-loader'] },
     // stylus-loader doesn't support webpack.LoaderOptionsPlugin properly,
     // so we need to add options in its query
