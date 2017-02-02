@@ -86,6 +86,7 @@
     "reflect-metadata": "^0.1.8",
     "remap-istanbul": "^0.6.4",
     "resolve": "^1.1.7",
+    "resolve-url-loader": "^1.6.1",
     "rimraf": "^2.5.3",
     "rsvp": "^3.0.17",
     "rxjs": "^5.0.1",
